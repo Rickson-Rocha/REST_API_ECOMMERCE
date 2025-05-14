@@ -28,7 +28,7 @@ public class OrderItem {
 
     public OrderItem() {}
 
-    public OrderItem(Integer quantity, Long id, Double price, Order order, Product product) {
+    public OrderItem(Long id,Integer quantity, Double price, Order order, Product product) {
         this.quantity = quantity;
         this.id = id;
         this.price = price;

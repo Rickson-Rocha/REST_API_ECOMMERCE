@@ -5,7 +5,9 @@ import br.com.rr.store.product.domain.entity.Product;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "tb_category")
@@ -22,12 +24,12 @@ public class Category {
             joinColumns = @JoinColumn(name = "category_id"),
             inverseJoinColumns = @JoinColumn(name = "product_id")
     )
-    private List<Product> products =  new ArrayList<>();
+    private Set<Product> products = new HashSet<>();
 
     public Category() {
     }
 
-    public Category(String name, Long id) {
+    public Category(Long id,String name) {
         this.name = name;
         this.id = id;
     }

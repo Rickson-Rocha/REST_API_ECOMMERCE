@@ -12,11 +12,12 @@ import java.util.List;
 public class Product {
 
     @Id
-
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String name;
 
+    @Column(columnDefinition = "TEXT")
     private String description;
 
     private Double price;
@@ -34,7 +35,7 @@ public class Product {
     public Product() {
     }
 
-    public Product(String imageUrl, Double price, String description, String name, Long id) {
+    public Product( Long id, String name,String description, Double price,String imageUrl) {
         this.imageUrl = imageUrl;
         this.price = price;
         this.description = description;
