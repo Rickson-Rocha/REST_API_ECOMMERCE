@@ -49,7 +49,6 @@ public class DatabaseSeeder {
         Product product3 = new Product(null,"Notebook","Dell", 3000.0,"teste.pdf");
         productRepository.saveAll(List.of(product1,product2,product3));
 
-        //Category_product
 
         electronic.addProduct(product1);
         electronic.addProduct(product3);
